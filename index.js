@@ -2,7 +2,7 @@
 
 console.log("~Sanity Check!~")
 
-const print = require('node-print');
+const print = require('node-print');//will print as an array
 const config = require('./config.js');
 const {
   withTempOptions,
@@ -97,7 +97,7 @@ switch (command) {
   case '7':
     hellosign.account.get()
       .then(function(response) {
-        print.pln(response) //will print as an array
+        print.pln(response)
         process.exit()
       })
       .catch(function(error) {
