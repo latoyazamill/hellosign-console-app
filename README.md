@@ -13,7 +13,7 @@ Create
 
 # Example Usage
 
-The `index` command should support the follwoing sub commands:
+The `./index.js` command should support the following sub commands:
 
 | command        | request                                              | example usage                            |
 |----------------|------------------------------------------------------|------------------------------------------|
