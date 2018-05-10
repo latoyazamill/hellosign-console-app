@@ -25,10 +25,9 @@ The `index` command should support the follwoing sub commands:
 
 **Note:** The example output below is not exactly what you would see in reality. (Since the output would depend on the data that is unique to you and your signature requests). Use the output below as a template for how each command should display the data.
 
-#### Show the menu `menu`
+#### Show the menu `$ ./index.js menu`
 
 ```
-$ ./index.js menu
 +---------+---------------------------------------------------------------------+
 | Command | Request                                                             |
 +---------+---------------------------------------------------------------------+
@@ -43,9 +42,8 @@ $ ./index.js menu
 +---------+---------------------------------------------------------------------+
 ```
 
-#### Get Template `8`
+#### Get Template `$ ./index.js 8`
 ```
-$ ./index.js 8
 [ { template:
      { template_id: 'BASED ON YOUR TEMPLATE',
        reusable_form_id: 'AUTO GENERATED',
@@ -84,9 +82,8 @@ $ ./index.js 8
     statusMessage: 'OK' } ]
 ```
 
-#### Send Non-Embedded Signature Request with Template `3`
+#### Send Non-Embedded Signature Request with Template `$ ./index.js 3`
 ```
-$ ./index.js 3
 [ { signature_request:
      { signature_request_id: 'AUTO GENERATED',
        test_mode: true,
