@@ -4,8 +4,12 @@
 
 Install
 
-Node Print: `npm install node-print`
-HelloSign SDK: `npm install hellosign-sdk`
+1. Node Print: `npm install node-print`
+2. HelloSign SDK: `npm install hellosign-sdk`
+
+Create
+
+1. A `config.js` file that will hold your API Key, Client ID, and Template IDs.
 
 # Example Usage
 
