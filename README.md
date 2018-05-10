@@ -28,6 +28,7 @@ The `index` command should support the follwoing sub commands:
 #### Show the menu `menu`
 
 ```
+$ ./index.js menu
 +---------+---------------------------------------------------------------------+
 | Command | Request                                                             |
 +---------+---------------------------------------------------------------------+
@@ -44,6 +45,7 @@ The `index` command should support the follwoing sub commands:
 
 #### Get Template `8`
 ```
+$ ./index.js 8
 [ { template:
      { template_id: 'BASED ON YOUR TEMPLATE',
        reusable_form_id: 'AUTO GENERATED',
@@ -84,6 +86,7 @@ The `index` command should support the follwoing sub commands:
 
 #### Send Non-Embedded Signature Request with Template `3`
 ```
+$ ./index.js 3
 [ { signature_request:
      { signature_request_id: 'AUTO GENERATED',
        test_mode: true,
