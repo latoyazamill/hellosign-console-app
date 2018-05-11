@@ -17,7 +17,7 @@ The `./index.js` command should support the following sub commands:
 
 | command        | request                                              | example usage                            |
 |----------------|------------------------------------------------------|------------------------------------------|
-|menu            | ./index.js                                           | menu                                     |
+|menu            | menu                                                 | ./index.js menu                          |
 |1               | Send Non-Embedded Signature Request                  | ./index.js 1                             |
 |2               | Get Signature Request                                | ./index.js 2                             |
 |3               | Send Non-Embedded Signature Request with Template    | ./index.js 3                             |
