@@ -27,9 +27,9 @@ The `./index.js` command should support the following sub commands:
 |7               | Get Account                                          | ./index.js 7                             |
 |8               | Get Template                                         | ./index.js 8                             |
 
-**Note:** The example output below is not exactly what you would see in reality. (Since the output would depend on the data that is unique to you and your signature requests). Use the output below as a template for how each command should display the data.
-
 # Example Output
+
+**Note:** The example output below is not exactly what you would see in reality. (Since the output would depend on the data that is unique to you and your signature requests). Use the output below as a template for how each command should display the data.
 
 #### Show the menu `$ ./index.js menu`
 
