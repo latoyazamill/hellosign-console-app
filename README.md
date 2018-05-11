@@ -11,7 +11,7 @@ Create
 
 1. A `config.js` file that will hold your API Key, Client ID, and Template IDs.
 
-# Example Usage
+# Usage Options
 
 The `./index.js` command should support the following sub commands:
 
@@ -28,6 +28,8 @@ The `./index.js` command should support the following sub commands:
 |8               | Get Template                                         | ./index.js 8                             |
 
 **Note:** The example output below is not exactly what you would see in reality. (Since the output would depend on the data that is unique to you and your signature requests). Use the output below as a template for how each command should display the data.
+
+# Example Output
 
 #### Show the menu `$ ./index.js menu`
 
