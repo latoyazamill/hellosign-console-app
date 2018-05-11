@@ -2,14 +2,14 @@
 
 # Getting Started
 
-Install
+**Install**
 
-1. Node Print: `npm install node-print`
-2. HelloSign SDK: `npm install hellosign-sdk`
+- Node Print: `npm install node-print`
+- HelloSign SDK: `npm install hellosign-sdk`
 
-Create
+**Create**
 
-1. A `config.js` file that will hold your API Key, Client ID, and Template IDs.
+- A `config.js` file that will hold your API Key, Client ID, and Template IDs.
 
 # Usage Options
 
