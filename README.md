@@ -26,6 +26,8 @@ The `./index.js` command should support the following sub commands:
 |6               | Send Request Reminder                                | ./index.js 6                             |
 |7               | Get Account                                          | ./index.js 7                             |
 |8               | Get Template                                         | ./index.js 8                             |
+|9               | Embedded Signing with Template                       | ./index.js 9                             |
+|10              | Embedded Signing withoutTemplate                     | ./index.js 10                            |
 
 # Example Output
 
