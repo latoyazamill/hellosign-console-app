@@ -3,7 +3,7 @@ const config = require('./config.js');
 const embeddedSigningWithTemp = {
   test_mode: 1,
   clientId: config.CLIENTID,
-  template_id: '846871b8078716c144496d86aa491675d3e3d59f',//template ID is currently in draft
+  template_id: 'dcd1333d0067d67af022e478f38c7d2e2d66bcad',
   subject: 'My Embedded Signature Request from my node.js Console App with a reusable form',
   message: 'Pretty awesome, right?',
   signers: [
