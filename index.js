@@ -9,6 +9,9 @@ const {
   withoutTempOptions,
   customFieldsOptions
 } = require('./non-embedded-signature.js');
+const {
+  embeddedSigningWithTemp
+} = require('./embedded-signing.js')
 
 const hellosign = require('hellosign-sdk')({
   key: config.APIKEY
@@ -27,6 +30,7 @@ switch (command) {
       { Command: 6, Request: 'Send Request Reminder'},
       { Command: 7, Request: 'Get Account'},
       { Command: 8, Request: 'Get Template'},
+      { Command: 9, Request: 'Embedded Signing'},
   ]
   print.pt(menu);
     break;
@@ -111,8 +115,18 @@ switch (command) {
         process.exit()
       })
       .catch(function(error) {
-        console.log(error)
+        console.log(error);
       });
+    break;
+  case '9':
+    hellosign.signatureRequest.createEmbeddedWithTemplate(embeddedSigningWithTemp)
+      .then(function(response) {
+        print.pln(response)
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      })
     break;
   default:
     console.log(`${command} is not a valid command!`);
