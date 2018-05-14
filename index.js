@@ -133,7 +133,11 @@ switch (command) {
   case '10':
     hellosign.signatureRequest.createEmbedded(embeddedSigningWithoutTemp)
       .then(function(response) {
-        print.pln(response)
+        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
+        return hellosign.embedded.getSignUrl(signatureId);
+      })
+      .then(function(response) {
+        print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
       })
       .catch(function(error) {
