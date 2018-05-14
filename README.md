@@ -4,8 +4,8 @@
 
 **Install**
 
-- Node Print: `npm install node-print`
-- HelloSign SDK: `npm install hellosign-sdk`
+- Node Print: `npm install node-print` [More Info](https://www.npmjs.com/package/node-print)
+- HelloSign SDK: `npm install hellosign-sdk` [More Info](https://app.hellosign.com/api/libraries)
 
 **Create**
 
