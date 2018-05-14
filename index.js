@@ -12,7 +12,10 @@ const {
 const {
   embeddedSigningWithTemp,
   embeddedSigningWithoutTemp
-} = require('./embedded-signing.js')
+} = require('./embedded-signing.js');
+const {
+  embeddedRequesting,
+} = require('./embedded-requesting.js');
 
 const hellosign = require('hellosign-sdk')({
   key: config.APIKEY
@@ -33,6 +36,7 @@ switch (command) {
       { Command: 8, Request: 'Get Template'},
       { Command: 9, Request: 'Embedded Signing with Template'},
       { Command: 10, Request: 'Embedded Signing without Template'},
+      { Command: 11, Request: 'Embedded Requesting'},
   ]
   print.pt(menu);
     break;
@@ -138,6 +142,16 @@ switch (command) {
       })
       .then(function(response) {
         print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    break;
+  case '11':
+    hellosign.unclaimedDraft.createEmbedded(embeddedRequesting)
+      .then(function(response) {
+        print.pln(response)
         process.exit()
       })
       .catch(function(error) {
