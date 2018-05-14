@@ -23,7 +23,7 @@ const embeddedSigningWithTemp = {
 const embeddedSigningWithoutTemp = {
   test_mode: 1,
   clientId: config.CLIENTID,
-  subject: 'Embedded Signature REquest without a template',
+  subject: 'Embedded Signature Request without a template',
   message: "Awesome, right?",
   signers: [
     {
