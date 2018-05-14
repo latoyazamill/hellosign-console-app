@@ -48,7 +48,12 @@ The `./index.js` command should support the following sub commands:
 | 5       | Cancel Incomplete Signature Request                                 |
 | 6       | Send Request Reminder                                               |
 | 7       | Get Account                                                         |
+
 | 8       | Get Template                                                        |
+| 9       | Embedded Signing with Template                                      |
+| 10      | Embedded Signing without Template                                   |
+| 11      | Embedded Requesting                                                 |
+| 12      | Embedded Requesting with Signing                                    |
 +---------+---------------------------------------------------------------------+
 ```
 
