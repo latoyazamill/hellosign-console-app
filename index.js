@@ -15,6 +15,7 @@ const {
 } = require('./embedded-signing.js');
 const {
   embeddedRequesting,
+  embeddedRequestingWithSigning
 } = require('./embedded-requesting.js');
 
 const hellosign = require('hellosign-sdk')({
@@ -37,6 +38,7 @@ switch (command) {
       { Command: 9, Request: 'Embedded Signing with Template'},
       { Command: 10, Request: 'Embedded Signing without Template'},
       { Command: 11, Request: 'Embedded Requesting'},
+      { Command: 12, Request: 'Embedded Requesting with Signing'},
   ]
   print.pt(menu);
     break;
@@ -150,6 +152,16 @@ switch (command) {
     break;
   case '11':
     hellosign.unclaimedDraft.createEmbedded(embeddedRequesting)
+      .then(function(response) {
+        print.pln(response)
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    break;
+  case '12':
+    hellosign.unclaimedDraft.createEmbedded(embeddedRequestingWithSigning)
       .then(function(response) {
         print.pln(response)
         process.exit()
