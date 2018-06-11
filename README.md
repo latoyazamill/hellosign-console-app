@@ -30,6 +30,7 @@ The `./index.js` command should support the following sub commands:
 |10              | Embedded Signing without Template                     | ./index.js 10                            |
 |11              | Embedded Requesting                                  | ./index.js 11                            |
 |12              | Embedded Requesting with Signing                     | ./index.js 12                            |
+|13              |Send Signature Request using Form Fields'             | ./index.js 13                            |
 
 # Example Output
 
@@ -53,6 +54,7 @@ The `./index.js` command should support the following sub commands:
 | 10      | Embedded Signing without Template                                   |
 | 11      | Embedded Requesting                                                 |
 | 12      | Embedded Requesting with Signing                                    |
+| 13      | Send Signature Request using Form Fields                            |
 +---------+---------------------------------------------------------------------+
 ```
 
