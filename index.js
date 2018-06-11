@@ -7,7 +7,8 @@ const config = require('./config.js');
 const {
   withTempOptions,
   withoutTempOptions,
-  customFieldsOptions
+  customFieldsOptions,
+  formFields
 } = require('./non-embedded-signature.js');
 const {
   embeddedSigningWithTemp,
@@ -39,6 +40,7 @@ switch (command) {
       { Command: 10, Request: 'Embedded Signing without Template'},
       { Command: 11, Request: 'Embedded Requesting'},
       { Command: 12, Request: 'Embedded Requesting with Signing'},
+      { Command: 13, Request: 'Send Signature Request using Form Fields'}
   ]
   print.pt(menu);
     break;
@@ -162,6 +164,16 @@ switch (command) {
     break;
   case '12':
     hellosign.unclaimedDraft.createEmbedded(embeddedRequestingWithSigning)
+      .then(function(response) {
+        print.pln(response)
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    break;
+  case '13':
+    hellosign.signatureRequest.send(formFields)
       .then(function(response) {
         print.pln(response)
         process.exit()
