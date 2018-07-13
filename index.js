@@ -19,6 +19,10 @@ const {
   embeddedRequestingWithSigning
 } = require('./embedded-requesting.js');
 
+const {
+  whiteLabelingOptions
+} = require('./whitelabeling.js')
+
 const hellosign = require('hellosign-sdk')({
   key: config.APIKEY
 });
@@ -40,7 +44,8 @@ switch (command) {
       { Command: 10, Request: 'Embedded Signing without Template'},
       { Command: 11, Request: 'Embedded Requesting'},
       { Command: 12, Request: 'Embedded Requesting with Signing'},
-      { Command: 13, Request: 'Send Signature Request using Form Fields'}
+      { Command: 13, Request: 'Send Signature Request using Form Fields'},
+      { Command: 14, Request: 'White Labeling Exmaples'}
   ]
   print.pt(menu);
     break;
@@ -131,7 +136,11 @@ switch (command) {
   case '9':
     hellosign.signatureRequest.createEmbeddedWithTemplate(embeddedSigningWithTemp)
       .then(function(response) {
-        print.pln(response)
+        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
+        return hellosign.embedded.getSignUrl(signatureId);
+      })
+      .then(function(response) {
+        print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
       })
       .catch(function(error) {
@@ -181,6 +190,16 @@ switch (command) {
       .catch(function(error) {
         console.log(error);
       });
+    break;
+  case '14':
+    hellosign.apiApp.update(config.CLIENTID, whiteLabelingOptions)
+      .then(function(response) {
+        print.pln(response)
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      })
     break;
   default:
     console.log(`${command} is not a valid command!`);

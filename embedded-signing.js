@@ -35,7 +35,7 @@ const embeddedSigningWithoutTemp = {
       name: 'ToyaLa'
     }
   ],
-  files: ['/Users/latoyawilliams/Downloads/NDA.pdf', '/Users/latoyawilliams/Downloads/sales-contract.pdf']
+  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf', '/Users/latoyawilliams/Downloads/sales-contract.pdf']
 };
 
 module.exports = {
