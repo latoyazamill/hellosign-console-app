@@ -38,6 +38,19 @@ const withTempOptions = {
   }]
 };
 
+const withTempAndFileOptions = {
+  test_mode: 1,
+  template_id: config.TEMPID,
+  subject: 'Purchase Order and Affirmations',
+  message: 'Glad we could come to an agreement.',
+  signers: [{
+    email_address: 'latoya.williams+1@hellosign.com',
+    name: 'LaToya',
+    role: 'Signer'
+  }],
+  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf'],
+};
+
 const customFieldsOptions = {
   test_mode: 1,
   template_id: config.TEMPID2,
@@ -116,6 +129,7 @@ const formFields = {
 module.exports = {
   withoutTempOptions,
   withTempOptions,
+  withTempAndFileOptions,
   customFieldsOptions,
   formFields
 };

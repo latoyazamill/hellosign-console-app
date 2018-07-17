@@ -7,6 +7,7 @@ const config = require('./config.js');
 const {
   withTempOptions,
   withoutTempOptions,
+  withTempAndFileOptions,
   customFieldsOptions,
   formFields
 } = require('./non-embedded-signature.js');
@@ -45,7 +46,8 @@ switch (command) {
       { Command: 11, Request: 'Embedded Requesting'},
       { Command: 12, Request: 'Embedded Requesting with Signing'},
       { Command: 13, Request: 'Send Signature Request using Form Fields'},
-      { Command: 14, Request: 'White Labeling Exmaples'}
+      { Command: 14, Request: 'White Labeling Exmaples'},
+      { Command: 15, Request: 'Send Non-Embedded Signature Request with Template and File'}
   ]
   print.pt(menu);
     break;
@@ -200,6 +202,16 @@ switch (command) {
       .catch(function(error) {
         console.log(error);
       })
+    break;
+  case '15':
+    hellosign.signatureRequest.sendWithTemplate(withTempAndFileOptions)
+      .then(function(response) {
+        print.pln(response)
+        process.exit()
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
     break;
   default:
     console.log(`${command} is not a valid command!`);
