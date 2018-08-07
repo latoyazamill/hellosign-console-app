@@ -35,7 +35,36 @@ const embeddedSigningWithoutTemp = {
       name: 'ToyaLa'
     }
   ],
-  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf', '/Users/latoyawilliams/Downloads/sales-contract.pdf']
+  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf', '/Users/latoyawilliams/Downloads/sales-contract.pdf'],
+  form_fields_per_document: [
+    [
+        {
+            "api_id": "uniqueIdHere_1",
+            "name": "",
+            "type": "text",
+            "x": 112,
+            "y": 328,
+            "width": 280,
+            "height": 16,
+            "required": true,
+            "signer": 0,
+            "page": 1
+        },
+        {
+            "api_id": "uniqueIdHere_2",
+            "name": "",
+            "type": "signature",
+            "x": 530,
+            "y": 415,
+            "width": 120,
+            "height": 30,
+            "required": true,
+            "signer": 1,
+            "page": 1
+        }
+    ],
+    []
+]
 };
 
 module.exports = {
