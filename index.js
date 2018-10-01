@@ -47,7 +47,8 @@ switch (command) {
       { Command: 12, Request: 'Embedded Requesting with Signing'},
       { Command: 13, Request: 'Send Signature Request using Form Fields'},
       { Command: 14, Request: 'White Labeling Exmaples'},
-      { Command: 15, Request: 'Send Non-Embedded Signature Request with Template and File'}
+      { Command: 15, Request: 'Send Non-Embedded Signature Request with Template and File'},
+      { Command: 16, Request: 'List Signature Requests'}
   ]
   print.pt(menu);
     break;
@@ -213,6 +214,15 @@ switch (command) {
         console.log(error);
       });
     break;
-  default:
+  case '16':
+    hellosign.signatureRequest.list({ page: 1 })
+      .then((response) => {
+        print.pln(response)
+        process.exit()
+      }).catch((err) => {
+        console.log(error);
+      });
+    break;
+    default:
     console.log(`${command} is not a valid command!`);
 };
