@@ -1,0 +1,19 @@
+{
+  "name": "console-app",
+  "version": "1.0.0",
+  "description": "# Getting Started",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"mocha\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latoyazamill/hellosign-console-app.git"
+  },
+  "author": "LaToya Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/latoyazamill/hellosign-console-app/issues"
+  },
+  "homepage": "https://github.com/latoyazamill/hellosign-console-app#readme"
+}
