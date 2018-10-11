@@ -43,20 +43,28 @@ const request = {
   },
   signatureRequestRemind: function() {
     return hellosign.signatureRequest.remind(config.SIGREQ, {
-        email_address: signers[0].email_address
+        email_address: withoutTempOptions.signers[0].email_address
       }) //This is only for the first signer, however, if I wanted to make it more dynamic, I could do a loop
   },
   accountGet: function() {
-
+    return hellosign.account.get()
   },
   templateGet: function() {
-
+    return hellosign.template.get(config.TEMPID)
   },
   createEmbedded: function() {
-
+    return hellosign.signatureRequest.createEmbeddedWithTemplate(embeddedSigningWithTemp)
+    .then(function(response) {
+      var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
+      return hellosign.embedded.getSignUrl(signatureId);
+    })
   },
   createEmbeddedWithTemplate: function() {
-
+    return hellosign.signatureRequest.createEmbedded(embeddedSigningWithoutTemp)
+      .then(function(response) {
+        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
+        return hellosign.embedded.getSignUrl(signatureId);
+      })
   },
   createEmbeddedUnclaimedDraftEr: function() {
 

@@ -86,9 +86,9 @@ switch (command) {
       });
     break;
   case '7':
-    hellosign.account.get()
+    request.accountGet()
       .then(function(response) {
-        print.pln(response)
+        print.pln(response.account)
         process.exit()
       })
       .catch(function(error) {
@@ -96,9 +96,9 @@ switch (command) {
       });
     break;
   case '8':
-    hellosign.template.get(config.TEMPID)
+    request.templateGet()
       .then(function(response) {
-        print.pln(response)
+        print.pln(response.template)
         process.exit()
       })
       .catch(function(error) {
@@ -106,11 +106,7 @@ switch (command) {
       });
     break;
   case '9':
-    hellosign.signatureRequest.createEmbeddedWithTemplate(embeddedSigningWithTemp)
-      .then(function(response) {
-        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
-        return hellosign.embedded.getSignUrl(signatureId);
-      })
+    request.createEmbedded()
       .then(function(response) {
         print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
@@ -120,11 +116,7 @@ switch (command) {
       })
     break;
   case '10':
-    hellosign.signatureRequest.createEmbedded(embeddedSigningWithoutTemp)
-      .then(function(response) {
-        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
-        return hellosign.embedded.getSignUrl(signatureId);
-      })
+    request.createEmbeddedWithTemplate()
       .then(function(response) {
         print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
