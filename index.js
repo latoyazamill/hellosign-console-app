@@ -3,30 +3,7 @@
 console.log("~Sanity Check!~")
 
 const print = require('node-print');//will print as an array
-const config = require('./config.js');
-const {
-  withTempOptions,
-  withoutTempOptions,
-  withTempAndFileOptions,
-  customFieldsOptions,
-  formFields
-} = require('./non-embedded-signature.js');
-const {
-  embeddedSigningWithTemp,
-  embeddedSigningWithoutTemp
-} = require('./embedded-signing.js');
-const {
-  embeddedRequesting,
-  embeddedRequestingWithSigning
-} = require('./embedded-requesting.js');
-
-const {
-  whiteLabelingOptions
-} = require('./whitelabeling.js')
-
-const hellosign = require('hellosign-sdk')({
-  key: config.APIKEY
-});
+const request = require('./request');
 
 const command = process.argv[2];
 
