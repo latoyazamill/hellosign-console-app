@@ -30,9 +30,9 @@ switch (command) {
   print.pt(menu);
     break;
   case '1':
-    hellosign.signatureRequest.send(withoutTempOptions)
+    request.sendSignatureRequest()
       .then(function(response) {
-        print.pln(response)
+        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
         process.exit()
       })
       .catch(function(error) {
@@ -40,7 +40,7 @@ switch (command) {
       });
     break;
   case '2':
-    hellosign.signatureRequest.get(config.SIGREQ)
+    request.signatureRequestGet()
       .then(function(response) {
         print.pln(response)
         process.exit()
@@ -50,9 +50,9 @@ switch (command) {
       });
     break;
   case '3':
-    hellosign.signatureRequest.sendWithTemplate(withTempOptions)
+    request.sendSignatureRequestWithTemplate()
       .then(function(response) {
-        print.pln(response)
+        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
         process.exit()
       })
       .catch(function(error) {
@@ -60,9 +60,9 @@ switch (command) {
       });
     break;
   case '4':
-    hellosign.signatureRequest.sendWithTemplate(customFieldsOptions)
+    request.sendSignatureRequestWithTemplateCf()
       .then(function(response) {
-        print.pln(response)
+        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
         process.exit()
       })
       .catch(function(error) {
@@ -70,21 +70,13 @@ switch (command) {
       });
     break;
   case '5':
-    var signatureRequestId = 'b0627de6c4dec94d54ef2fac19eea3bedc8b5d28' //This will change depending on the signature request id
-
-    hellosign.signatureRequest.cancel(signatureRequestId)
-      .then(function(response) {
-        print.pln(response) //This line might be unecessary because there is no response. The response will be a status code 200 when successful
-        process.exit
-      })
+    request.signatureRequestCancel()
       .catch(function(error) {
         console.log(error);
       });
     break;
   case '6':
-    hellosign.signatureRequest.remind(config.SIGREQ, {
-        email_address: nonEmbdOptions.signers[0].email_address
-      }) //This is only for the first signer, however, if I wanted to make it more dynamic, I could do a loop
+    request.signatureRequestRemind()
       .then(function(response) {
         print.pln(response)
         process.exit()

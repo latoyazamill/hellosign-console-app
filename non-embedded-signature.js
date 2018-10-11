@@ -1,6 +1,6 @@
 const config = require('./config.js');
 
-signers = [{
+const signers = [{
     email_address: 'latoya.williams+1@hellosign.com',
     name: 'LaToya',
     order: 0
@@ -136,5 +136,6 @@ module.exports = {
   withTempOptions,
   withTempAndFileOptions,
   customFieldsOptions,
-  formFields
+  formFields,
+  signers
 };
