@@ -43,8 +43,8 @@ const request = {
   },
   signatureRequestRemind: function() {
     return hellosign.signatureRequest.remind(config.SIGREQ, {
-        email_address: withoutTempOptions.signers[0].email_address
-      }) //This is only for the first signer, however, if I wanted to make it more dynamic, I could do a loop
+      email_address: withoutTempOptions.signers[0].email_address
+    }) //This is only for the first signer, however, if I wanted to make it more dynamic, I could do a loop
   },
   accountGet: function() {
     return hellosign.account.get()
@@ -54,10 +54,10 @@ const request = {
   },
   createEmbedded: function() {
     return hellosign.signatureRequest.createEmbeddedWithTemplate(embeddedSigningWithTemp)
-    .then(function(response) {
-      var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
-      return hellosign.embedded.getSignUrl(signatureId);
-    })
+      .then(function(response) {
+        var signatureId = response.signature_request.signatures[0].signature_id; //first signer info only
+        return hellosign.embedded.getSignUrl(signatureId);
+      })
   },
   createEmbeddedWithTemplate: function() {
     return hellosign.signatureRequest.createEmbedded(embeddedSigningWithoutTemp)
@@ -67,22 +67,24 @@ const request = {
       })
   },
   createEmbeddedUnclaimedDraftEr: function() {
-
+    return hellosign.unclaimedDraft.createEmbedded(embeddedRequesting)
   },
   createEmbeddedUnclaimedDraftErWs: function() {
-
+    return hellosign.unclaimedDraft.createEmbedded(embeddedRequestingWithSigning)
   },
   sendSignatureRequestFf: function() {
-
+    return hellosign.signatureRequest.send(formFields)
   },
   apiAppUpdate: function() {
-
+    return hellosign.apiApp.update(config.CLIENTID, whiteLabelingOptions)
   },
   sendSignatureRequestWithTemplateAndFile: function() {
-
+    return hellosign.signatureRequest.sendWithTemplate(withTempAndFileOptions)
   },
   signatureRequestList: function() {
-
+    return hellosign.signatureRequest.list({
+      page: 1
+    })
   },
 };
 

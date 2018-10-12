@@ -7,7 +7,7 @@ const embeddedRequesting = {
   type: 'request_signature',
   subject: 'The NDA we talked about',
   requester_email_address: 'latoya.williams+1@hellosign.com',
-  files: ['/Users/latoyawilliams/Downloads/NDA.pdf']
+  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf']
 };
 
 //This will instrust HelloSign to NOT email the signers and will allow you to decide when and how to display the embedded signing iFram on your site
@@ -17,7 +17,7 @@ const embeddedRequestingWithSigning = {
   type: 'request_signature',
   subject: 'The NDA we talked about',
   requester_email_address: 'latoya.williams+1@hellosign.com',
-  files: ['/Users/latoyawilliams/Downloads/NDA.pdf'],
+  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf'],
   is_for_embedded_signing: 1
 };
 

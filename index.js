@@ -126,9 +126,9 @@ switch (command) {
       });
     break;
   case '11':
-    hellosign.unclaimedDraft.createEmbedded(embeddedRequesting)
+    request.createEmbeddedUnclaimedDraftEr()
       .then(function(response) {
-        print.pln(response)
+        print.pln(response.unclaimed_draft.claim_url)
         process.exit()
       })
       .catch(function(error) {
@@ -136,9 +136,9 @@ switch (command) {
       });
     break;
   case '12':
-    hellosign.unclaimedDraft.createEmbedded(embeddedRequestingWithSigning)
+    request.createEmbeddedUnclaimedDraftErWs()
       .then(function(response) {
-        print.pln(response)
+        print.pln(response.unclaimed_draft.claim_url)
         process.exit()
       })
       .catch(function(error) {
@@ -146,7 +146,7 @@ switch (command) {
       });
     break;
   case '13':
-    hellosign.signatureRequest.send(formFields)
+    request.sendSignatureRequestFf()
       .then(function(response) {
         print.pln(response)
         process.exit()
@@ -156,9 +156,9 @@ switch (command) {
       });
     break;
   case '14':
-    hellosign.apiApp.update(config.CLIENTID, whiteLabelingOptions)
+    request.apiAppUpdate()
       .then(function(response) {
-        print.pln(response)
+        print.pln(response.api_app)
         process.exit()
       })
       .catch(function(error) {
@@ -166,7 +166,7 @@ switch (command) {
       })
     break;
   case '15':
-    hellosign.signatureRequest.sendWithTemplate(withTempAndFileOptions)
+    request.sendSignatureRequestWithTemplateAndFile()
       .then(function(response) {
         print.pln(response)
         process.exit()
@@ -176,9 +176,9 @@ switch (command) {
       });
     break;
   case '16':
-    hellosign.signatureRequest.list({ page: 1 })
+    request.signatureRequestList()
       .then((response) => {
-        print.pln(response)
+        print.pln(response.signature_requests)
         process.exit()
       }).catch((err) => {
         console.log(error);
