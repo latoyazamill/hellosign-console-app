@@ -6,6 +6,9 @@
 
 - Node Print: `npm install node-print` [More Info](https://www.npmjs.com/package/node-print)
 - HelloSign SDK: `npm install hellosign-sdk` [More Info](https://app.hellosign.com/api/libraries)
+- Testing:
+     - Mocha as a developer dependency: `npm install --save-dev mocha` [More Info](https://mochajs.org/)
+     - Chai:`npm install chai` [More Info](https://www.chaijs.com/guide/installation/)
 
 **Create**
 
