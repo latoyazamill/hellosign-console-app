@@ -23,7 +23,7 @@ switch (command) {
       { Command: 11, Request: 'Embedded Requesting'},
       { Command: 12, Request: 'Embedded Requesting with Signing'},
       { Command: 13, Request: 'Send Signature Request using Form Fields'},
-      { Command: 14, Request: 'White Labeling Exmaples'},
+      { Command: 14, Request: 'White Labeling Examples'},
       { Command: 15, Request: 'Send Non-Embedded Signature Request with Template and File'},
       { Command: 16, Request: 'List Signature Requests'}
   ]

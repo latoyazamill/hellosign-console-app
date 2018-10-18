@@ -67,6 +67,9 @@ The `./index.js` command should support the following sub commands:
 | 11      | Embedded Requesting                                                 |
 | 12      | Embedded Requesting with Signing                                    |
 | 13      | Send Signature Request using Form Fields                            |
+|14       | White Labeling Examples                                             |
+|15       | Send Non-Embedded Signature Request with Template and File          |
+|16       | List Signature Requests                                             |
 +---------+---------------------------------------------------------------------+
 ```
 
@@ -158,4 +161,4 @@ The `./index.js` command should support the following sub commands:
 
 Tests can be run with the command `$ npm test`
 
-Write tests with [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/) in `test.js` that assert the functions for the commands in the `requests/request.js` file is tested
+Sample tests are written with [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/) in `test.js` that assert the functions for the commands in the `requests/request.js` file.
