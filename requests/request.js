@@ -1,4 +1,4 @@
-const config = require('./config.js');
+const config = require('../config.js');
 const hellosign = require('hellosign-sdk')({
   key: config.APIKEY
 });

@@ -1,4 +1,4 @@
-const config = require('./config.js');
+const config = require('../config.js');
 
 const embeddedSigningWithTemp = {
   test_mode: 1,

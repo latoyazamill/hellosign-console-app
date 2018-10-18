@@ -1,4 +1,4 @@
-const config = require('./config.js');
+const config = require('../config.js');
 
 const signers = [{
     email_address: 'latoya.williams+1@hellosign.com',

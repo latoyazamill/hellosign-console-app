@@ -1,4 +1,4 @@
-const config = require('./config.js');
+const config = require('../config.js');
 
 //HelloSign will send an email to the signers and ask them to come to hellosign.com to sign and complete the documents.
 const embeddedRequesting = {
