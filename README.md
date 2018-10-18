@@ -154,3 +154,8 @@ The `./index.js` command should support the following sub commands:
     statusCode: 200,
     statusMessage: 'OK' } ]
 ```
+# Testing
+
+Tests can be run with the command `$ npm test`
+
+Write tests with [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/) in `test.js` that assert the functions for the commands in the `requests/request.js` file is tested
