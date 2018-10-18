@@ -67,9 +67,9 @@ The `./index.js` command should support the following sub commands:
 | 11      | Embedded Requesting                                                 |
 | 12      | Embedded Requesting with Signing                                    |
 | 13      | Send Signature Request using Form Fields                            |
-|14       | White Labeling Examples                                             |
-|15       | Send Non-Embedded Signature Request with Template and File          |
-|16       | List Signature Requests                                             |
+| 14      | White Labeling Examples                                             |
+| 15      | Send Non-Embedded Signature Request with Template and File          |
+| 16      | List Signature Requests                                             |
 +---------+---------------------------------------------------------------------+
 ```
 
