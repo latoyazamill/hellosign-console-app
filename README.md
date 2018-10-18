@@ -14,6 +14,15 @@
 
 - A `config.js` file that will hold your API Key, Client ID, and Template IDs.
 
+# File Structure
+
+The app uses a simple file structure for a console testing app
+
+```
+requests/               # list of signature request options
+test/                   # testing with Mocha and Chai
+```
+
 # Usage Options
 
 The `./index.js` command should support the following sub commands:
