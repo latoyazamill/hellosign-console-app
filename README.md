@@ -161,4 +161,4 @@ The `./index.js` command should support the following sub commands:
 
 Tests can be run with the command `$ npm test`
 
-Sample tests are written with [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/) in `test.js` that assert the functions for the commands in the `requests/request.js` file.
+Sample tests are written with [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/) in `test/test.js` that assert the functions for the commands in the `requests/request.js` file.
