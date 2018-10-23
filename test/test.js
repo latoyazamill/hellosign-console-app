@@ -63,10 +63,16 @@ describe('Request', function () {
   //       expect(results.unclaimed_draft.claim_url).to.be.a('string');
   //     })
   // });
-  it('createEmbeddedUnclaimedDraftErWs', function () {
-    return request.createEmbeddedUnclaimedDraftErWs()
+  // it('createEmbeddedUnclaimedDraftErWs', function () {
+  //   return request.createEmbeddedUnclaimedDraftErWs()
+  //     .then(function (results) {
+  //       expect(results.unclaimed_draft.claim_url).to.be.a('string');
+  //     })
+  // });
+  it('sendSignatureRequestFf', function () {
+    return request.sendSignatureRequestFf()
       .then(function (results) {
-        expect(results.unclaimed_draft.claim_url).to.be.a('string');
+        expect(results.signature_request.metadata.clientId).to.equal(config.CLIENTID);
       })
   });
 });
