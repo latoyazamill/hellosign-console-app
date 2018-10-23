@@ -33,4 +33,10 @@ describe('Request', function () {
         expect(results.signature_request_id).to.equal(config.SIGREQ);
       })
   });
+  it('accountGet', function () {
+    return request.accountGet()
+      .then(function (results) {
+        expect(results.account.account_id).to.equal(config.ACCOUNTID);
+      })
+  });
 });
