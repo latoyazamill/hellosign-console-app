@@ -32,7 +32,7 @@ switch (command) {
   case '1':
     request.sendSignatureRequest()
       .then(function(response) {
-        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
+        console.log(`Signature Request Id: ${response.signature_request.signature_request_id}`);
         process.exit()
       })
       .catch(function(error) {
@@ -42,7 +42,7 @@ switch (command) {
   case '2':
     request.signatureRequestGet()
       .then(function(response) {
-        print.pln(response)
+        console.log(response);
         process.exit()
       })
       .catch(function(error) {
@@ -52,7 +52,7 @@ switch (command) {
   case '3':
     request.sendSignatureRequestWithTemplate()
       .then(function(response) {
-        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
+        console.log(`Signature Request Id: ${response.signature_request.signature_request_id}`);
         process.exit()
       })
       .catch(function(error) {
@@ -62,7 +62,7 @@ switch (command) {
   case '4':
     request.sendSignatureRequestWithTemplateCf()
       .then(function(response) {
-        print.pln(`Signature Request Id: ${response.signature_request.signature_request_id}`)
+        console.log(`Signature Request Id: ${response.signature_request.signature_request_id}`);
         process.exit()
       })
       .catch(function(error) {
@@ -78,7 +78,7 @@ switch (command) {
   case '6':
     request.signatureRequestRemind()
       .then(function(response) {
-        print.pln(response)
+        console.log(response);
         process.exit()
       })
       .catch(function(error) {
@@ -88,7 +88,7 @@ switch (command) {
   case '7':
     request.accountGet()
       .then(function(response) {
-        print.pln(response.account)
+        console.log(response.account);
         process.exit()
       })
       .catch(function(error) {
@@ -98,7 +98,7 @@ switch (command) {
   case '8':
     request.templateGet()
       .then(function(response) {
-        print.pln(response.template)
+        console.log(response.template);
         process.exit()
       })
       .catch(function(error) {
@@ -108,7 +108,7 @@ switch (command) {
   case '9':
     request.createEmbedded()
       .then(function(response) {
-        print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
+        console.log(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
       })
       .catch(function(error) {
@@ -118,7 +118,7 @@ switch (command) {
   case '10':
     request.createEmbeddedWithTemplate()
       .then(function(response) {
-        print.pln(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
+        console.log(`URL = ${response.embedded.sign_url}`);//to see the entire repsonse, comment out the fire "then" and replace this argument with "response"
         process.exit()
       })
       .catch(function(error) {
@@ -128,7 +128,7 @@ switch (command) {
   case '11':
     request.createEmbeddedUnclaimedDraftEr()
       .then(function(response) {
-        print.pln(response.unclaimed_draft.claim_url)
+        console.log(response.unclaimed_draft.claim_url);
         process.exit()
       })
       .catch(function(error) {
@@ -138,7 +138,7 @@ switch (command) {
   case '12':
     request.createEmbeddedUnclaimedDraftErWs()
       .then(function(response) {
-        print.pln(response.unclaimed_draft.claim_url)
+        console.log(response.unclaimed_draft.claim_url);
         process.exit()
       })
       .catch(function(error) {
@@ -148,7 +148,7 @@ switch (command) {
   case '13':
     request.sendSignatureRequestFf()
       .then(function(response) {
-        print.pln(response)
+        console.log(response);
         process.exit()
       })
       .catch(function(error) {
@@ -158,7 +158,7 @@ switch (command) {
   case '14':
     request.apiAppUpdate()
       .then(function(response) {
-        print.pln(response.api_app)
+        console.log(response.api_app);
         process.exit()
       })
       .catch(function(error) {
@@ -168,7 +168,7 @@ switch (command) {
   case '15':
     request.sendSignatureRequestWithTemplateAndFile()
       .then(function(response) {
-        print.pln(response)
+        console.log(response);
         process.exit()
       })
       .catch(function(error) {
@@ -178,7 +178,7 @@ switch (command) {
   case '16':
     request.signatureRequestList()
       .then((response) => {
-        print.pln(response.signature_requests)
+        console.log(response.signature_requests);
         process.exit()
       }).catch((err) => {
         console.log(error);
