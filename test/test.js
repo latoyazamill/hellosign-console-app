@@ -30,7 +30,7 @@ describe('Request', function () {
   it('signatureRequestRemind', function () {
     return request.signatureRequestRemind()
       .then(function (results) {
-        expect(results.signature_request_id).to.equal(config.SIGREQ);
+        expect(results.signature_request.signature_request_id).to.equal(config.SIGREQ);
       })
   });
   it('accountGet', function () {
@@ -86,6 +86,12 @@ describe('Request', function () {
     return request.sendSignatureRequestWithTemplateAndFile()
       .then(function (results) {
         expect(results.statusMessage).to.equal('OK');
+      })
+  });
+  it('signatureRequestList', function () {
+    return request.signatureRequestList()
+      .then(function (results) {
+        expect(results.list_info).to.be.an('object');
       })
   });
 });
