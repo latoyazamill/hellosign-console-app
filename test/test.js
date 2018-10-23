@@ -82,4 +82,10 @@ describe('Request', function () {
   //       //expect(results.api_app.white_labeling_options).to.equal(config.CLIENTID);
   //     })
   // });
+  it('sendSignatureRequestWithTemplateAndFile', function () {
+    return request.sendSignatureRequestWithTemplateAndFile()
+      .then(function (results) {
+        expect(results.statusMessage).to.equal('OK');
+      })
+  });
 });
