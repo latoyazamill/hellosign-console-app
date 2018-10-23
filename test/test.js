@@ -39,4 +39,10 @@ describe('Request', function () {
         expect(results.account.account_id).to.equal(config.ACCOUNTID);
       })
   });
+  it('templateGet', function () {
+    return request.templateGet()
+      .then(function (results) {
+        expect(results.template.template_id).to.equal(config.TEMPID);
+      })
+  });
 });
