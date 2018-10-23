@@ -3,7 +3,7 @@
 console.log("~Sanity Check!~")
 
 const print = require('node-print');//will print as an array
-const request = require('./request');
+const request = require('./requests/request');
 
 const command = process.argv[2];
 
