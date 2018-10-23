@@ -21,4 +21,10 @@ describe('Request', function () {
         expect(results.signature_request.title).to.equal('Purchase Order');
       })
   });
+  it('sendSignatureRequestWithTemplateCf', function () {
+    return request.sendSignatureRequestWithTemplateCf()
+      .then(function (results) {
+        expect(results.signature_request.custom_fields).to.be.an('array');
+      })
+  });
 });
