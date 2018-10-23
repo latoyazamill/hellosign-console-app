@@ -45,4 +45,22 @@ describe('Request', function () {
         expect(results.template.template_id).to.equal(config.TEMPID);
       })
   });
+  it('createEmbedded', function () {
+    return request.createEmbedded()
+      .then(function (results) {
+        expect(results.embedded.sign_url).to.be.a('string');
+      })
+  });
+  // it('createEmbeddedWithTemplate', function () {
+  //   return request.createEmbeddedWithTemplate()
+  //     .then(function (results) {
+  //       expect(results.embedded.sign_url).to.be.a('string');
+  //     })
+  // });
+  it('createEmbeddedUnclaimedDraftEr', function () {
+    return request.createEmbeddedUnclaimedDraftEr()
+      .then(function (results) {
+        expect(results.unclaimed_draft.claim_url).to.be.a('string');
+      })
+  });
 });
