@@ -38,13 +38,13 @@ const request = {
     return hellosign.signatureRequest.sendWithTemplate(customFieldsOptions)
   },
   signatureRequestCancel: function() {
-    var signatureRequestId = '9ad58d48047dd7133a5eb46ddd12f41a9518c0a4' //This will change depending on the signature request id
+    var signatureRequestId = 'fdd3623404a369c5ed3af997b62290466afb5f17' //This will change depending on the signature request id
     return hellosign.signatureRequest.cancel(signatureRequestId)
   },
   signatureRequestRemind: function() {
     return hellosign.signatureRequest.remind(config.SIGREQ, {
       email_address: withoutTempOptions.signers[0].email_address
-    }) //This is only for the first signer, however, if I wanted to make it more dynamic, I could do a loop
+    })
   },
   accountGet: function() {
     return hellosign.account.get()
