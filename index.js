@@ -32,6 +32,7 @@ switch (command) {
   case '1':
     request.sendSignatureRequest()
       .then(function(response) {
+        console.log(response);
         console.log(`Signature Request Id: ${response.signature_request.signature_request_id}`);
         process.exit()
       })
@@ -52,6 +53,7 @@ switch (command) {
   case '3':
     request.sendSignatureRequestWithTemplate()
       .then(function(response) {
+        console.log(response);
         console.log(`Signature Request Id: ${response.signature_request.signature_request_id}`);
         process.exit()
       })
@@ -138,7 +140,7 @@ switch (command) {
   case '12':
     request.createEmbeddedUnclaimedDraftErWs()
       .then(function(response) {
-        console.log(response.unclaimed_draft.claim_url);
+        console.log(response);
         process.exit()
       })
       .catch(function(error) {
@@ -176,9 +178,9 @@ switch (command) {
       });
     break;
   case '16':
-    request.signatureRequestList()
+    request.signatureRequestList({query: 'to: latoya.williams+1@hellosgn.com'})
       .then((response) => {
-        console.log(response.signature_requests);
+        console.log(response);
         process.exit()
       }).catch((err) => {
         console.log(error);

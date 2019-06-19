@@ -10,12 +10,18 @@ const embeddedSigningWithTemp = {
     {
       email_address: 'latoya.williams+1@hellosign.com',
       name: 'LaToya',
-      role: 'Client'
+      role_name: 'Client'
     },
     {
       email_address: 'latoya.williams+2@hellosign.com',
       name: 'ToyaLa',
-      role: 'Witness'
+      role_name: 'Witness'
+    }
+  ],
+  ccs: [
+    {
+      email_address: 'bob@example.com',
+      role: 'Accounting'
     }
   ]
 };
@@ -35,36 +41,36 @@ const embeddedSigningWithoutTemp = {
       name: 'ToyaLa'
     }
   ],
-  files: ['/Users/latoyawilliams/Downloads/AFFIRMATIONS.pdf', '/Users/latoyawilliams/Downloads/sales-contract.pdf'],
-  form_fields_per_document: [
-    [
-        {
-            "api_id": "uniqueIdHere_1",
-            "name": "",
-            "type": "text",
-            "x": 112,
-            "y": 328,
-            "width": 280,
-            "height": 16,
-            "required": true,
-            "signer": 0,
-            "page": 1
-        },
-        {
-            "api_id": "uniqueIdHere_2",
-            "name": "",
-            "type": "signature",
-            "x": 530,
-            "y": 415,
-            "width": 120,
-            "height": 30,
-            "required": true,
-            "signer": 1,
-            "page": 1
-        }
-    ],
-    []
-]
+  file_url: ['https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf'],
+//   form_fields_per_document: [
+//     [
+//         {
+//             "api_id": "uniqueIdHere_1",
+//             "name": "",
+//             "type": "text",
+//             "x": 112,
+//             "y": 328,
+//             "width": 280,
+//             "height": 16,
+//             "required": true,
+//             "signer": 0,
+//             "page": 1
+//         },
+//         {
+//             "api_id": "uniqueIdHere_2",
+//             "name": "",
+//             "type": "signature",
+//             "x": 530,
+//             "y": 415,
+//             "width": 120,
+//             "height": 30,
+//             "required": true,
+//             "signer": 1,
+//             "page": 1
+//         }
+//     ],
+//     []
+// ]
 };
 
 module.exports = {
